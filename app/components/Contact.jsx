@@ -24,7 +24,7 @@ const Contact = () => {
                 className='flex-1 p-4 border-[0.5px] bg-white border-gray-400 outline-none mb-6 w-full '></textarea>
                 <button type='Submit' className='py-3 px-8 w-max flex items-center justify-between gap-2 bg-black cursor-pointer
                 text-white rounded-full mx-auto hover:bg-black duration-500'>Submit Now <Image src={assets.right_arrow_white} alt='' className='w-4' /> </button>
-                <p className='mt-4'>Sending.....</p>
+               
             </form>
 
         </div>

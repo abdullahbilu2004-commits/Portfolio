@@ -32,10 +32,7 @@ const Services = () => {
                             {description}
                         </p>
 
-                        <a href={link} className='flex items-center gap-2 text-sm mt-5'>
-                            Read More 
-                            <Image src={assets.right_arrow} alt='' className='w-4' />
-                        </a>
+
                     </div>
                 ))}
 
