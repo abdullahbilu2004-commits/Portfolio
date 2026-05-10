@@ -18,8 +18,8 @@ const Footer = () => {
             mt-12 py-6'>
                 <p>@ 2025 Abdullah Azhar. All rights reserved.</p>
                 <ul className='flex items-center justify-center mt-4 gap-10 sm:mt-0'>
-                    <li><a target='_blank' href="">GitHub</a></li>
-                    <li><a target='_blank' href="">LinkedIn</a></li>
+                    <li><a target='_blank' href="https://github.com/abdullahbilu2004-commits">GitHub</a></li>
+                    <li><a target='_blank' href="https://www.linkedin.com/in/abdullah-azhar-tech/">LinkedIn</a></li>
                 </ul>
             </div>
         </div>
