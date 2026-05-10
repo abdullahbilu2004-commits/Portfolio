@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <div className='mt-20'>
             <div className='text-center'>
-                <Image src={assets.logo} alt='' className='w-36 mx-auto mb-2' />
+                <Image src={assets.OGlogo} alt='' className='w-36 mx-auto mb-2' />
                 <div  className='flex w-max items-center gap-2 mx-auto'>
                     <Image src={assets.mail_icon} alt='' className='w-6 mx-auto mb-2' />
                     abdullahbilu2004@gmail.com

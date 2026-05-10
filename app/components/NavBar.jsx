@@ -42,7 +42,7 @@ const NavBar = () => {
       >
         {/* Logo */}
         <a href="#top">
-          <Image src={assets.logo} alt="Logo" className="w-28 cursor-pointer mr-14" />
+          <Image src={assets.OGlogo} alt="Logo" className="w-28 cursor-pointer mr-14" />
         </a>
 
         {/* Nav Links */}
