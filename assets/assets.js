@@ -114,28 +114,28 @@ export const assets = {
     right_arrow_bold,
     right_arrow_bold_dark
 };
-export const workData = [
-    {
-        title: 'Frontend project',
-        description: 'Web Design',
-        bgImage: '/work-1.png',
-    },
-    {
-        title: 'Geo based app',
-        description: 'Mobile App',
-        bgImage: '/work-2.png',
-    },
-    {
-        title: 'Photography site',
-        description: 'Web Design',
-        bgImage: '/work-3.png',
-    },
-    {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
-        bgImage: '/work-4.png',
-    },
-]
+// export const workData = [
+//     {
+//         title: 'Frontend project',
+//         description: 'Web Design',
+//         bgImage: '/work-1.png',
+//     },
+//     {
+//         title: 'Geo based app',
+//         description: 'Mobile App',
+//         bgImage: '/work-2.png',
+//     },
+//     {
+//         title: 'Photography site',
+//         description: 'Web Design',
+//         bgImage: '/work-3.png',
+//     },
+//     {
+//         title: 'UI/UX designing',
+//         description: 'UI/UX Design',
+//         bgImage: '/work-4.png',
+//     },
+// ]
 
 
 
@@ -183,3 +183,47 @@ export const toolsData = [
     assets.gemini_ai,
     assets.git
 ];
+
+export const workData = [
+  {
+    title: 'AI SaaS Platform',
+    description:
+      'A powerful AI SaaS application with article generation, AI image generation, background remover, object remover, resume analyzer, and QR code generator.',
+    tech: ['React', 'Node.js', 'PostgreSQL', 'Gemini AI'],
+  },
+
+  {
+    title: 'MERN Blogging App',
+    description:
+      'A modern MERN blogging platform featuring AI blog generation, admin dashboard, categories, authentication, and responsive design.',
+    tech: ['MongoDB', 'Express', 'React', 'Node.js'],
+  },
+
+  {
+    title: 'TrustPilot Clone',
+    description:
+      'A responsive TrustPilot-inspired review platform built using Next.js, Clerk authentication, and Tailwind CSS.',
+    tech: ['Next.js', 'Tailwind', 'Clerk'],
+  },
+
+  {
+    title: 'Resume Builder',
+    description:
+      'An AI-powered resume builder with professional templates, live preview, resume analysis, and PDF export functionality.',
+    tech: ['React', 'Tailwind', 'AI'],
+  },
+
+  {
+    title: 'QR Code Generator',
+    description:
+      'A responsive QR code generator application with instant QR creation, download, and sharing functionality.',
+    tech: ['React', 'API Integration'],
+  },
+
+  {
+    title: 'NASA Website',
+    description:
+      'A modern website website showcasing the real time data from NASA and responsive UI design.',
+    tech: ['JavaScript', 'HTML' , 'CSS3' ],
+  },
+]
