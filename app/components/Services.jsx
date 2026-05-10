@@ -1,6 +1,3 @@
-
-
-
 import { assets, serviceData } from '@/assets/assets'
 import Image from 'next/image'
 import React from 'react'
@@ -17,8 +14,8 @@ const Services = () => {
                 and full-stack integration to bring your ideas to life.
             </p>
 
-            {/* Centered Grid */}
-            <div className='grid grid-cols-1 sm:grid-cols-2 gap-6 my-10 place-items-center'>
+            
+            <div className='flex justify-center sm:grid-cols-2 gap-6 my-10 place-items-center'>
 
                 {serviceData.map(({ icon, title, description, link }, index) => (
                     <div 

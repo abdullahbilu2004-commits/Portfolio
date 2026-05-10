@@ -137,11 +137,42 @@ export const workData = [
     },
 ]
 
+// export const serviceData = [
+//     { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
+//     // { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
+//     { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
+//     // { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
+// ]
+
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    // { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    // { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
+    {
+        icon: assets.web_icon,
+        title: 'Frontend Development',
+        description:
+            'Building responsive and modern user interfaces using React, Next.js, Tailwind CSS, and TypeScript.',
+        link: '',
+    },
+    {
+        icon: assets.web_icon,
+        title: 'Backend Development',
+        description:
+            'Creating secure and scalable backend systems with Node.js, Express.js, MongoDB, and REST APIs.',
+        link: '',
+    },
+    {
+        icon: assets.web_icon,
+        title: 'Full Stack Web Apps',
+        description:
+            'Developing complete MERN and Next.js applications with authentication, databases, dashboards, and APIs.',
+        link: '',
+    },
+    {
+        icon: assets.web_icon,
+        title: 'Website Deployment',
+        description:
+            'Deploying and managing web applications on platforms like Vercel, GitHub, and cloud hosting services.',
+        link: '',
+    },
 ]
 
 export const infoList = [
