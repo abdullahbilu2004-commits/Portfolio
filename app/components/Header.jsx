@@ -13,12 +13,12 @@ const Header = () => {
         Hi! I'm Abdullah Azhar <Image src={assets.hand_icon} className='w-6' alt='' />
         </h3>
         <h1 className='text-3xl fotn-Ovo sm:text-6xl lg:text-[66px]'>
-            FrontEnd Web Developer based in Pakistan.
+            Full Stack Web Developer based in Pakistan.
             </h1>
 
             <p className='max-w-2xl mx-auto font-Ovo'>
-                I am ForntEnd Developer from Lahore, Pakistan with 2 years experience in multiple
-                projects like Netflix clone, Spotify Clone, NASA project and many other exciting projects 
+                I am Full Stack Developer from Lahore, Pakistan with 2 years experience in multiple
+                projects like Netflix clone, Spotify Clone, NASA , MERN stack  like AI Powered SAAS application, AI powered Blogging App   project and many other exciting projects 
             </p>
 
             <div className='flex flex-col sm:flex-row items-center mt-4 gap-4'>
