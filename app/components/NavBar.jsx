@@ -1,99 +1,159 @@
 "use client";
+
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 
 const NavBar = () => {
   const [isScroll, setIsScroll] = useState(false);
+
   const sideMenuRef = useRef();
 
+  // Open Menu
   const openMenu = () => {
-    sideMenuRef.current.style.transform = "translateX(-16rem)";
+    sideMenuRef.current.style.right = "0";
   };
 
+  // Close Menu
   const closeMenu = () => {
-    sideMenuRef.current.style.transform = "translateX(16rem)";
+    sideMenuRef.current.style.right = "-16rem";
   };
 
+  // Navbar Scroll Effect
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScroll(true);
-      } else {
-        setIsScroll(false);
-      }
+      setIsScroll(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const navLinks = [
+    { name: "Home", link: "#top" },
+    { name: "About", link: "#about" },
+    { name: "Services", link: "#services" },
+    { name: "Work", link: "#work" },
+    { name: "Contact", link: "#contact" },
+  ];
+
   return (
     <>
-      {/* Background banner blur */}
-      <div className="w-11/12 fixed right-0 top-0 -z-10 translate-y-[80%]">
-        <Image src={assets.header_bg_color} alt="banner-color" className="w-full" />
+      {/* Background Blur */}
+      <div className="w-11/12 fixed right-0 top-0 -z-10 opacity-50">
+        <Image
+          src={assets.header_bg_color}
+          alt="bg"
+          className="w-full"
+        />
       </div>
 
-      {/* Main Nav */}
+      {/* Navbar */}
       <nav
-        className={`w-full  px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 transition-all duration-500 ${isScroll ? "bg-white bg-opacity-80 backdrop-blur-md shadow-md" : ""
-          }`}
+        className={`fixed top-[-30px] left-0 w-full flex items-center justify-between px-5 sm:px-8 lg:px-[8%] py-4 z-50 transition-all duration-500 ${
+          isScroll
+            ? "bg-white/80 backdrop-blur-lg shadow-sm"
+            : "bg-transparent"
+        }`}
       >
         {/* Logo */}
         <a href="#top">
-          <Image src={assets.OGlogo} alt="Logo" className="w-28 cursor-pointer mr-14" />
+          <Image
+            src={assets.OGlogo}
+            alt="logo"
+            className="w-24 sm:w-28 cursor-pointer"
+          />
         </a>
 
-        {/* Nav Links */}
-       <ul
-  className={`hidden md:flex items-center gap-6 lg:gap-8 px-12 py-3 transition-all duration-500 ${
-    isScroll ? "bg-white " : "bg-white shadow-md rounded-full"
-  }`}
->
-
-          <li><a href="#top" className="font-Ovo">Home</a></li>
-          <li><a href="#about" className="font-Ovo">About Me</a></li>
-          <li><a href="#services" className="font-Ovo">Services</a></li>
-          <li><a href="#work" className="font-Ovo">My Work</a></li>
-          <li><a href="#contact" className="font-Ovo">Contact Me</a></li>
+        {/* Desktop Menu */}
+        <ul
+          className={`hidden md:flex items-center gap-6 lg:gap-10 px-8 lg:px-12 py-3 rounded-full transition-all duration-500 ${
+            isScroll
+              ? "bg-white shadow-sm"
+              : "bg-white/90 shadow-md"
+          }`}
+        >
+          {navLinks.map((item, index) => (
+            <li key={index}>
+              <a
+                href={item.link}
+                className="font-Ovo text-gray-700 hover:text-pink-500 transition"
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
         </ul>
 
-        {/* Right Side Buttons */}
+        {/* Right Side */}
         <div className="flex items-center gap-4">
-          {/* Theme Toggle */}
-          <button className="cursor-pointer">
-            <Image src={assets.moon_icon} alt="toggle-icon" className="w-6" />
+          
+          {/* Dark Mode Button Commented */}
+          {/*
+          <button>
+            <Image
+              src={assets.moon_icon}
+              alt="theme"
+              className="w-6 cursor-pointer"
+            />
           </button>
+          */}
 
           {/* Contact Button */}
           <a
-            className="hidden lg:flex gap-3 px-10 py-2.5 border font-Ovo border-gray-500 items-center rounded-full ml-4"
             href="#contact"
+            className="hidden lg:flex items-center gap-2 px-6 xl:px-10 py-2.5 border border-gray-400 rounded-full font-Ovo hover:bg-gray-100 transition"
           >
-            Contact <Image src={assets.arrow_icon} alt="Arrow" className="w-3" />
+            Contact
+            <Image
+              src={assets.arrow_icon}
+              alt="arrow"
+              className="w-3"
+            />
           </a>
 
-          {/* Mobile Menu Button */}
-          <button className="block md:hidden cursor-pointer" onClick={openMenu}>
-            <Image src={assets.menu_black} alt="menu-black" className="w-6" />
+          {/* Mobile Menu Icon */}
+          <button
+            className="md:hidden"
+            onClick={openMenu}
+          >
+            <Image
+              src={assets.menu_black}
+              alt="menu"
+              className="w-6 cursor-pointer"
+            />
           </button>
         </div>
 
-        {/* ------------------- Mobile Menu ------------------- */}
+        {/* Mobile Menu */}
         <ul
           ref={sideMenuRef}
-          onClick={closeMenu}
-          className="flex md:hidden flex-col py-20 px-10 fixed top-0 bottom-0 -right-64 gap-4 w-64 h-screen bg-rose-50 transition duration-500"
+          className="md:hidden fixed top-0 -right-64 w-64 h-screen bg-white flex flex-col gap-6 px-10 py-20 z-50 transition-all duration-500 shadow-2xl"
         >
-          <div className="absolute top-6 right-6">
-            <Image src={assets.close_black} alt="close" className="w-5 cursor-pointer" />
+          {/* Close Button */}
+          <div
+            className="absolute top-6 right-6"
+            onClick={closeMenu}
+          >
+            <Image
+              src={assets.close_black}
+              alt="close"
+              className="w-5 cursor-pointer"
+            />
           </div>
-          <li><a href="#top" onClick={closeMenu} className="font-Ovo">Home</a></li>
-          <li><a href="#about" onClick={closeMenu} className="font-Ovo">About Me</a></li>
-          <li><a href="#services" onClick={closeMenu} className="font-Ovo">Services</a></li>
-          <li><a href="#work" onClick={closeMenu} className="font-Ovo">My Work</a></li>
-          <li><a href="#contact" onClick={closeMenu} className="font-Ovo">Contact Me</a></li>
+
+          {navLinks.map((item, index) => (
+            <li key={index}>
+              <a
+                href={item.link}
+                onClick={closeMenu}
+                className="font-Ovo text-gray-700"
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
     </>

@@ -1,50 +1,99 @@
-import React from 'react'
-import Image from 'next/image'
-import { assets, infoList, toolsData } from '@/assets/assets'
+import React from "react";
+import Image from "next/image";
+import { assets, infoList, toolsData } from "@/assets/assets";
 
 const About = () => {
-    return (
-        <div id='about' className='flex items-center flex-col scroll-mt-20 px-[12%] py-10'>
-            <h4 className='text-lg text-center mb-2'>Introduction</h4>
-            <h2 className='text-center text-5xl'>About Me</h2>
+  return (
+    <section
+      id="about"
+      className="w-11/12 max-w-6xl mx-auto scroll-mt-20 py-16 px-4 sm:px-6 lg:px-8"
+    >
+      {/* Heading */}
+      <div className="text-center">
+        <h4 className="text-lg font-Ovo text-gray-600">
+          Introduction
+        </h4>
 
-            <div className='flex w-full flex-row lg:flex-row gap-20 my-20 items-center'>
-                <div className='w-64 sm:w-80 max-w-none'>
-                    <Image src={assets.profilePic} alt='user' className='w-fill rounded-3xl' />
-                </div>
+        <h2 className="text-3xl sm:text-5xl font-Ovo mt-2">
+          About Me
+        </h2>
+      </div>
 
-                <div className='flex-1'>
-                    <p className="max-w-2xl mb-20">
-                        A Full Stack web developer is a creative engineer who transforms UI designs into responsive, interactive web experiences. They specialize in HTML, CSS, JavaScript, and frameworks like React or Next.js to build seamless interfaces. With a sharp eye for detail and a passion for user experience, they ensure every layout, animation, and component feels intuitive, fast, and polished across all devices.
-                    </p>
-                    <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
-                        {infoList.map(({ icon, iconDark, title, description }, index) => (
-                              <li key={index}
-                              className='border border-gray-400 p-6 rounded-lg cursor-pointer hover:bg-indigo-50 hover:shadow-xl transition-all duration-500'>
-
-                                <Image className='mt-3 w-7' src={icon} alt={title} />
-                                <h3 className='my-4 font-semibold text-gray-700'>{title}</h3>
-                                <p className='text-gray-600 text-sm'>{description}</p>
-                            </li>
-                        ))}
-                    </ul>
-
-                    <h4 className='my-6 text-gray-700'>Tools I use</h4>
-                    <ul className='flex items-center gap-3 md:gap-5'>
-                        {toolsData.map((tool,index)=>(
-                          <li key={index} 
-                          className='flex justify-center items-center w-12 sm:w-14 hover:bg-indigo-50 hover:shadow-xl transition-all duration-500
-                           aspect-square border border-gray-400 rounded-lg cursor-pointer'>
-                            <Image src={tool} alt='tool' className='w-5 sm:w-7' />
-
-                          </li>
-                        ))}
-                    </ul>
-
-                </div>
-            </div>
+      {/* Main Content */}
+      <div className="flex flex-col lg:flex-row items-center gap-14 lg:gap-20 mt-16">
+        
+        {/* Profile Image */}
+        <div className="flex-shrink-0">
+          <Image
+            src={assets.profilePic}
+            alt="profile"
+            className="w-64 sm:w-80 rounded-3xl shadow-lg"
+          />
         </div>
-    )
-}
 
-export default About
+        {/* Right Content */}
+        <div className="flex-1">
+          
+          {/* Description */}
+          <p className="text-gray-600 leading-7 max-w-2xl mb-10 text-sm sm:text-base">
+            A Full Stack Web Developer is a creative engineer who transforms
+            UI designs into responsive and interactive web experiences. Skilled
+            in HTML, CSS, JavaScript, React, and Next.js, they build fast,
+            scalable, and user-friendly applications with clean design and
+            seamless performance across all devices.
+          </p>
+
+          {/* Info Cards */}
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-3xl">
+            {infoList.map(
+              ({ icon, title, description }, index) => (
+                <li
+                  key={index}
+                  className="border border-gray-300 rounded-xl p-6 hover:-translate-y-1 hover:shadow-xl hover:bg-indigo-50 transition-all duration-500 cursor-pointer"
+                >
+                  <Image
+                    src={icon}
+                    alt={title}
+                    className="w-7"
+                  />
+
+                  <h3 className="my-4 font-semibold text-gray-700">
+                    {title}
+                  </h3>
+
+                  <p className="text-sm text-gray-600 leading-6">
+                    {description}
+                  </p>
+                </li>
+              )
+            )}
+          </ul>
+
+          {/* Tools Section */}
+          <div className="mt-10">
+            <h4 className="text-gray-700 font-medium mb-5">
+              Tools I Use
+            </h4>
+
+            <ul className="flex flex-wrap items-center gap-4">
+              {toolsData.map((tool, index) => (
+                <li
+                  key={index}
+                  className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 rounded-xl hover:-translate-y-1 hover:bg-indigo-50 hover:shadow-lg transition-all duration-500 cursor-pointer"
+                >
+                  <Image
+                    src={tool}
+                    alt="tool"
+                    className="w-5 sm:w-7"
+                  />
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default About;
