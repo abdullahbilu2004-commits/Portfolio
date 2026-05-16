@@ -1,12 +1,10 @@
+
 import React from 'react';
 import { workData } from '@/assets/assets';
 
 const Work = () => {
   return (
-    <section
-      id='work'
-      className='scroll-mt-20 px-4 sm:px-6 lg:px-[12%] py-20'
-    >
+    <section id='work' className='scroll-mt-20 px-4 sm:px-6 lg:px-[12%] py-20'>
       <div className='max-w-7xl mx-auto'>
 
         {/* Section Header */}
@@ -34,7 +32,7 @@ const Work = () => {
           {workData.map((project, index) => (
             <div
               key={index}
-              className='bg-white border border-gray-200 rounded-3xl p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500'
+              className='bg-white border border-gray-200 rounded-3xl p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between'
             >
 
               {/* Number */}
@@ -53,8 +51,7 @@ const Work = () => {
               </p>
 
               {/* Tech Stack */}
-              <div className='flex flex-wrap gap-2'>
-
+              <div className='flex flex-wrap gap-2 mb-6'>
                 {project.tech.map((item, i) => (
                   <span
                     key={i}
@@ -63,8 +60,36 @@ const Work = () => {
                     {item}
                   </span>
                 ))}
-
               </div>
+
+              {/* Links (SAFE RENDERING) */}
+              {(project.links?.vercel || project.links?.linkedIn) && (
+                <div className='flex gap-4 mt-auto'>
+
+                  {project.links?.vercel && (
+                    <a
+                      href={project.links.vercel}
+                      target='_blank'
+                      rel='noreferrer'
+                      className='px-4 py-2 rounded-xl bg-black text-white text-sm hover:bg-gray-800 transition'
+                    >
+                      Live Demo
+                    </a>
+                  )}
+
+                  {project.links?.linkedIn && (
+                    <a
+                      href={project.links.linkedIn}
+                      target='_blank'
+                      rel='noreferrer'
+                      className='px-4 py-2 rounded-xl border border-gray-300 text-sm hover:bg-gray-100 transition'
+                    >
+                      LinkedIn
+                    </a>
+                  )}
+
+                </div>
+              )}
 
             </div>
           ))}

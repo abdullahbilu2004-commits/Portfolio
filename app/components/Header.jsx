@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div className='w-11/12 max-w-3xl text-center  mx-auto flex flex-col h-screen items-center justify-center gap-4'>
         <div className='mt-[100px]'>
-      <Image src={assets.user_image} alt='profile_img' 
+      <Image src={assets.profilePic} alt='profile_img' 
       className='rounded-full w-32' />
       </div>
          <h3 className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo'> 
@@ -24,9 +24,14 @@ const Header = () => {
             <div className='flex flex-col sm:flex-row items-center mt-4 gap-4'>
                 <a href="#contact" className=' flex gap-2 items-center px-10 py-3 text-white border-white bg-black rounded-full border border-gary-500'>
                     Conatct Me <Image src={assets.right_arrow_white} alt='' className='w-4' /></a>
+
+                      <a href='/AbdullahCV.pdf' download className=' flex gap-2 items-center px-10 py-3  rounded-full border border-gary-500'>
+                    MY Resume  <Image src={assets.download_icon} alt='' className='w-4' /></a>
                 
                 
             </div>
+
+
     </div>
   )
 }

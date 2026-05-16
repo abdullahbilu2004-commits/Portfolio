@@ -1,22 +1,22 @@
-import user_image from './user-image.jpg';
+// import user_image from './user-image.jpg';
 import code_icon from './code-icon.png';
 import code_icon_dark from './code-icon-dark.png';
 import edu_icon from './edu-icon.png';
 import edu_icon_dark from './edu-icon-dark.png';
 import project_icon from './project-icon.png';
-import project_icon_dark from './project-icon-dark.png';
+// import project_icon_dark from './project-icon-dark.png';
 import vscode from './vscode.png';
 import sql from './sql.png';
 import gemini_ai from './gemini_ai.webp';
 import git from './git.png';
 import mongodb from './mongodb.png';
 import right_arrow_white from './right-arrow-white.png';
-import logo from './logo.png';
+// import logo from './logo.png';
 import OGlogo from './OGlogo.jpeg';
-import logo_dark from './logo_dark.png';
+// import logo_dark from './logo_dark.png';
 import mail_icon from './mail_icon.png';
 import mail_icon_dark from './mail_icon_dark.png';
-import profile_img from './profile-img.png';
+import profilePic from './profilePic.jpeg';
 import download_icon from './download-icon.png';
 import hand_icon from './hand-icon.png';
 import header_bg_color from './header-bg-color.png';
@@ -77,24 +77,24 @@ import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 //     right_arrow_bold_dark
 // };
 export const assets = {
-    user_image,
+  profilePic,
+    // user_image,
     code_icon,
     code_icon_dark,
     edu_icon,
     edu_icon_dark,
     project_icon,
-    project_icon_dark,
     vscode,
     sql,
     git,
     mongodb,
-    gemini_ai,   // 👈 add this
+    gemini_ai,   
     right_arrow_white,
-    logo,OGlogo,
-    logo_dark,
+    // logo,
+    OGlogo,
+    // logo_dark,
     mail_icon,
     mail_icon_dark,
-    profile_img,
     download_icon,
     hand_icon,
     header_bg_color,
@@ -189,8 +189,9 @@ export const workData = [
   {
     title: 'AI SaaS Platform',
     description:
-      'A powerful AI SaaS application with article generation, AI image generation, background remover, object remover, resume analyzer, and QR code generator.',
+      'A powerful AI SaaS application with article generation, AI image generation, background remover, object remover, resume analyzer, and QR code generator and Video Generator. But in development process',
     tech: ['React', 'Node.js', 'PostgreSQL', 'Gemini AI'],
+   
   },
 
   {
@@ -198,6 +199,9 @@ export const workData = [
     description:
       'A modern MERN blogging platform featuring AI blog generation, admin dashboard, categories, authentication, and responsive design.',
     tech: ['MongoDB', 'Express', 'React', 'Node.js'],
+     links: {
+      linkedIn: 'https://www.linkedin.com/posts/abdullah-azhar-tech_mern-fullstackdeveloper-reactjs-activity-7428858559800524800-Boh1?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE4VEYEBaMaeCkCblMwUkSx3sEJWj0YWovw'
+    }
   },
 
   {
@@ -205,13 +209,19 @@ export const workData = [
     description:
       'A responsive TrustPilot-inspired review platform built using Next.js, Clerk authentication, and Tailwind CSS.',
     tech: ['Next.js', 'Tailwind', 'Clerk'],
+     links: {
+       vercel: 'https://trust-piliot-clone.vercel.app/'
+    }
   },
 
   {
-    title: 'Resume Builder',
+    title: 'Spotify clone ',
     description:
-      'An AI-powered resume builder with professional templates, live preview, resume analysis, and PDF export functionality.',
+      'A Spotify Clone I developed a fully responsive Spotify Clone using React.js and Tailwind CSS with albums, playlists, and a fully functional music player.It includes play/pause, next/previous controls, seek functionality, and a smooth UI optimized for all screen sizes. ',
     tech: ['React', 'Tailwind', 'AI'],
+     links: {
+      vercel: 'https://spotify-clone-dun-sigma.vercel.app/'
+    }
   },
 
   {
@@ -219,6 +229,9 @@ export const workData = [
     description:
       'A responsive QR code generator application with instant QR creation, download, and sharing functionality.',
     tech: ['React', 'API Integration'],
+     links: {
+       vercel: 'https://qr-code-generator-murex-gamma.vercel.app/' 
+    }
   },
 
   {
@@ -226,5 +239,8 @@ export const workData = [
     description:
       'A modern website website showcasing the real time data from NASA and responsive UI design.',
     tech: ['JavaScript', 'HTML' , 'CSS3' ],
+     links: {
+      vercel: 'https://nasa-project-ashen-kappa.vercel.app/'
+    }
   },
 ]

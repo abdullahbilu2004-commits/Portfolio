@@ -10,12 +10,12 @@ const About = () => {
 
             <div className='flex w-full flex-row lg:flex-row gap-20 my-20 items-center'>
                 <div className='w-64 sm:w-80 max-w-none'>
-                    <Image src={assets.user_image} alt='user' className='w-fill rounded-3xl' />
+                    <Image src={assets.profilePic} alt='user' className='w-fill rounded-3xl' />
                 </div>
 
                 <div className='flex-1'>
                     <p className="max-w-2xl mb-20">
-                        A front-end developer is a creative engineer who transforms UI designs into responsive, interactive web experiences. They specialize in HTML, CSS, JavaScript, and frameworks like React or Next.js to build seamless interfaces. With a sharp eye for detail and a passion for user experience, they ensure every layout, animation, and component feels intuitive, fast, and polished across all devices.
+                        A Full Stack web developer is a creative engineer who transforms UI designs into responsive, interactive web experiences. They specialize in HTML, CSS, JavaScript, and frameworks like React or Next.js to build seamless interfaces. With a sharp eye for detail and a passion for user experience, they ensure every layout, animation, and component feels intuitive, fast, and polished across all devices.
                     </p>
                     <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
                         {infoList.map(({ icon, iconDark, title, description }, index) => (
