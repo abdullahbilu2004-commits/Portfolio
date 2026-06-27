@@ -243,4 +243,14 @@ export const workData = [
       vercel: 'https://nasa-project-ashen-kappa.vercel.app/'
     }
   },
+
+   {
+    title: 'Intern task Vendor & Management System ',
+    description:
+      'Developed a full-stack Vendor Management System using Next.js, MongoDB, and Tailwind CSS with features including user authentication, vendor management, quotation management, vendor comparison, and a responsive dashboard with CRUD operations.',
+    tech: ['Next.js', 'Tailwind', 'MongooDB'],
+     links: {
+       vercel: 'https://intern-project-two-szm9.vercel.app/'
+    }
+  },
 ]
