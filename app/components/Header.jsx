@@ -59,7 +59,7 @@ const Header = () => {
 
         {/* Resume Button */}
         <a
-          href="/AbdullahCV.pdf"
+          href="/AbdullahAzhar-Resume.pdf"
           download
           className="flex items-center gap-2 px-8 sm:px-10 py-3 rounded-full border border-gray-400 hover:bg-gray-100 transition"
         >
